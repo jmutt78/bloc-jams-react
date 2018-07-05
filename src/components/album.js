@@ -28,16 +28,21 @@ class Album extends Component {
      },
      durationchange: e => {
        this.setState({ duration: this.audioElement.duration });
+     },
+     volumecontrol: e => {
+       this.setState({ currentVolume: this.audioElement.currentVolume });
      }
    };
    this.audioElement.addEventListener('timeupdate', this.eventListeners.timeupdate);
    this.audioElement.addEventListener('durationchange', this.eventListeners.durationchange);
+   this.audioElement.addEventListener('volumecontrol', this.eventListeners.volumecontrol);
  }
 
  componentWillUnmount() {
    this.audioElement.src = null;
    this.audioElement.removeEventListener('timeupdate', this.eventListeners.timeupdate);
    this.audioElement.removeEventListener('durationchange', this.eventListeners.durationchange);
+   this.audioElement.removeEventListener('volumecontrol', this.eventListeners.volumecontrol);
  }
 
  play() {
@@ -92,7 +97,12 @@ formatTime(timeSeconds) {
       return '-:--'
     }
   }
-
+  handleVolumeChange(e) {
+    const newVolume = e.target.value;
+    this.audioElement.currentVolume = newVolume;
+    this.setState({ currentVolume: newVolume });
+    this.audioElement.volume = newVolume;
+  }
 
   render() {
     return (
@@ -140,6 +150,7 @@ formatTime(timeSeconds) {
               handleNextClick={() => this.handleNextClick()}
               handleTimeChange={(e) => this.handleTimeChange(e)}
               formatTime={(timeSeconds) => this.formatTime(timeSeconds)}
+              handleVolumeChange={(e) => this.handleVolumeChange(e)}
             />
             </section>
     );
