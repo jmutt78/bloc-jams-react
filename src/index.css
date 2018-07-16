@@ -1,5 +1,48 @@
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+  margin: 0 auto;
+  background: linear-gradient(to bottom right, #4556d3, #2bb9e8);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+h2 {
+  font-family: 'Didactic Gothic';
+  color: white;
+  letter-spacing: 2.5px;
+  line-height: 2.5em;
+}
+
+p {
+  font-family: 'Century Gothic';
+  font-size: 20px;
+  color: white;
+  line-height: 1.8em;
+}
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
