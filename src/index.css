@@ -1,5 +1,102 @@
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,400i|IBM+Plex+Sans+Condensed:400,400i|IBM+Plex+Sans:100,100i,400,400i,700,700i|IBM+Plex+Serif:400,400i');
+
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  padding-top: 35px;
+  font-family: 'IBM Plex Sans', sans-serif;
+  background-color: lightgrey;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'IBM Plex Sans';
+  letter-spacing: .25em;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+#page-title {
+  position: relative;
+  z-index: 4;
+}
+
+a {
+  padding: 20px;
+  font-weight: 600;
+  font-size: 30px;
+}
+
+a:visited {
+  color: #223ba0;
+}
+
+nav {
+  background-color: #eca5058f;
+  padding: 25px;ß
+  text-align: left;
+  position: fixed;
+  top: 2%;
+  left: 2%;
+  border-radius: 10px;
+  border: 2px solid black;
+}
+
+img {
+  border-radius: 25px;
+  margin-top: 20px;
+}
+
+#album-cover-art {
+  margin-top: 20px;
+  border-radius: 25px;
+}
+
+#release-info {
+  font-weight: bold;
+  font-family: 'IBM Plex Sans', cursive;
+}
+
+td {
+  border: solid 1px lightgrey;
+}
+
+#song-list {
+  margin: auto;
+  border: solid 1px lightgrey;
+}
+
+#song-title-column {
+  width: 10em;
+}
+
+#song-title {
+  padding-left: 10px;
+  text-align: left;
+}
+
+div .ion-md-volume-low {
+  position: relative;
+  width: 50%;
+  float: left;
+}
+
+div .ion-md-volume-high {
+  position: relative;
+}
+
+#play-pause {
+  margin: 5px 5px;
+}
+
+.player-bar {
+  background-color: #eca5058f;
+  position: sticky;
+  left: 7%;
+  bottom: 50%;
+  width: 200px;
+  border-radius: 25px;
+  border: 2px solid black;
+  padding: 15px 0;
 }
